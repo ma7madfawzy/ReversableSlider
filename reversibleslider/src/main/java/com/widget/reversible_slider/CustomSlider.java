@@ -1,9 +1,6 @@
-package com.widget.slider.reversible_slider;
+package com.widget.reversible_slider;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -12,14 +9,13 @@ import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager.widget.ViewPager;
 
+import com.widget.reversible_slider.transformations.ZoomOutPageTransformer;
 import com.widget.reversibleslider.R;
 import com.widget.reversibleslider.databinding.CustomSliderLayoutBinding;
-import com.widget.slider.transformations.ZoomOutPageTransformer;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -32,7 +28,7 @@ import java.util.List;
  */
 public class CustomSlider extends LinearLayout {
     public static final String TAG = CustomSlider.class.getSimpleName();
-    private final short DEFAULT_ANIMATION_DURATION = 2000;
+    private final short DEFAULT_ANIMATION_DURATION = 4000;
     private CustomSliderLayoutBinding binding;
     private SliderAdapter adapter;
     private boolean reverse, scrollingState;
@@ -95,6 +91,7 @@ public class CustomSlider extends LinearLayout {
     public void setData(List<String> imageUrls) {
         adapter.setDataList(imageUrls);
         binding.dotsIndicator.setViewPager(binding.viewPager);
+        withAnimation();
     }
 
     /**
@@ -133,7 +130,7 @@ public class CustomSlider extends LinearLayout {
     /**
      * optional to animate the viewPager sliding behaviour
      **/
-    public void withAnimation(int... milliseconds) {
+    protected void withAnimation(int... milliseconds) {
         runnable = new Runnable() {
             public void run() {
                 int currentPage = binding.viewPager.getCurrentItem();
@@ -153,6 +150,16 @@ public class CustomSlider extends LinearLayout {
             }
         };
         runnable.run();
+    }
+
+    /**
+     * edit animation interval
+     *
+     * @param milliseconds
+     */
+    public void setAnimationTime(int milliseconds) {
+        if (handler != null && runnable != null) handler.removeCallbacks(runnable);
+        withAnimation(milliseconds);
     }
 
     private void slidePager(int currentPage) {

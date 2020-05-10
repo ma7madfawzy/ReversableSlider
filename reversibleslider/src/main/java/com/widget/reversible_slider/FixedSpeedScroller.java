@@ -1,4 +1,4 @@
-package com.widget.slider.reversible_slider;
+package com.widget.reversible_slider;
 
 import android.content.Context;
 import android.view.animation.Interpolator;

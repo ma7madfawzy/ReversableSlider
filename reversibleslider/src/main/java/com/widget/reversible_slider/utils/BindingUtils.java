@@ -1,4 +1,4 @@
-package com.widget.slider.utils;
+package com.widget.reversible_slider.utils;
 
 import android.widget.ImageView;
 

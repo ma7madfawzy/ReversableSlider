@@ -1,4 +1,4 @@
-package com.widget.slider.transformations;
+package com.widget.reversible_slider.transformations;
 
 /**
  * Created by Muhammad Noamany on 11,September,2018

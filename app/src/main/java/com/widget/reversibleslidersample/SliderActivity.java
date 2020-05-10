@@ -32,6 +32,7 @@ public class SliderActivity extends AppCompatActivity {
      */
     private void setDummyDataSlider2() {
         binding.slider2.setData(generateDummy());
+        binding.slider2.setAnimationTime(8000); // edit the animation interval time to be 8000 milliseconds
     }
 
     /**
@@ -39,7 +40,6 @@ public class SliderActivity extends AppCompatActivity {
      */
     private void setDummyDataSlider1() {
         binding.slider.setData(generateDummy());
-        binding.slider.withAnimation(4000);
     }
 
     @NotNull
@@ -47,8 +47,8 @@ public class SliderActivity extends AppCompatActivity {
         List<String> imageUrls = new ArrayList<>();
         imageUrls.add("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg?w=1155&h=1541");
         imageUrls.add("https://scx2.b-cdn.net/gfx/news/hires/2019/2-nature.jpg");
-        imageUrls.add("https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2017/11/04133712/waterfall.jpg");
-        imageUrls.add("https://lh3.googleusercontent.com/proxy/yBZ9E0P2iE8jfwDGGMPtFG_1pTz2mWT7BPA5-2LRk4A0P2EQS6DcaoPaZB-qXj6E7FNfX6_tB3eXO6wReuzXAxsD2qJv4aM-wmcCdl2nEzb41HXX7mlRUOsyFDg");
+        imageUrls.add("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg?w=1155&h=1541");
+        imageUrls.add("https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg?w=1155&h=1541");
         imageUrls.add("https://www.scitecheuropa.eu/wp-content/uploads/2019/09/Nature-climate.jpg");
         return imageUrls;
     }
