@@ -1,6 +1,5 @@
 # ReversibleSlider
-[ ![Download](https://api.bintray.com/packages/ma7madfawzy/reversibleslider/com.widget.reversibleslider/images/download.svg) ](https://bintray.com/ma7madfawzy/reversibleslider/com.widget.reversibleslider/_latestVersion)
-
+[ ![Download](https://api.bintray.com/packages/ma7madfawzy/ReversibleSlider/com.widget.reversibleslider/images/download.svg) ](https://bintray.com/ma7madfawzy/ReversibleSlider/com.widget.reversibleslider/_latestVersion)
 An Android library that lets you create an animated slider widget from your data list in a simple and fast way.
 
 ![sample](images/Demo2.gif)
@@ -12,7 +11,7 @@ An Android library that lets you create an animated slider widget from your data
 #### Using Gradle
 ```
 dependencies {
-    implementation 'com.widget.reversibleslider:1.0.0'
+    implementation 'com.widget.reversibleslider:+'
 }
 ```
 #### Using Maven
