@@ -1,0 +1,22 @@
+ext {
+    bintrayRepo = 'ReversibleSlider'          //the repo name in Bintray dashboard
+    bintrayName = 'com.widget.reversibleslider'//the package name in Bintray repo
+    libraryName = 'reversibleslider'           // the module name in the android studio project
+    //library name will be like -> publishedGroupId:artifact:libraryVersion
+    publishedGroupId = 'com.widget'             //the ID you want to add in the 'implementation line'
+    artifact = 'reversibleslider'               //the artifact you want to add in the 'implementation line'
+    libraryVersion = '1.0.0'
+    libraryDescription = 'An Android library that lets you create an animated slider widget from your data list in a simple and fast way.'
+
+    siteUrl = 'https://github.com/ma7madfawzy/ReversibleSlider'
+    gitUrl = 'https://github.com/ma7madfawzy/ReversibleSlider.git'
+
+
+    developerId = 'ma7madfawzy'
+    developerName = 'Mahmad fawzy'
+    developerEmail = 'ma7madfawzy@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 1.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-1.0.txt'
+    allLicenses = ["Apache-2.0"]
+}

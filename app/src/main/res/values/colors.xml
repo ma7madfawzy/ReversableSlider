@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D33A3A</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="blue">#3F51B5</color>
+
+    <!--     slider dots color -->
+    <color name="slider_dots_color_selected">#3F51B5</color>
+    <color name="slider_dots_color_unselected">#5c5c5c</color>
+</resources>
